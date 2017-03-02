@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=fireBall
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ fireBall\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=fireBall()
+comment1.text=\r\n\ fireBall\ will\ cunstuct\ a\ fireBall\ to\ scale\ \r\n\ @param\ There\ is\ no\ paramters\r\n\ @return\ fireBall\ is\ returned\ \r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ act\ handles\ the\ actions\ must\ be\ taken\ everytime\ the\ program\ is\ run\ \r\n\ @param\ There\ is\ no\ paramters\r\n\ @return\ Nothing\ is\ returned\ \r\n
+comment3.params=
+comment3.target=void\ fall()
+comment3.text=\r\n\ fall\ will\ make\ the\ fireBall\ fall\ to\ the\ platform\ when\ its\ in\ the\ air\ \ \r\n\ @param\ There\ is\ no\ paramters\r\n\ @return\ Nothing\ is\ returned\ \r\n
+comment4.params=
+comment4.target=void\ movement()
+comment4.text=\r\n\ movement\ will\ determine\ which\ way\ the\ fireBall\ is\ thrown\ \r\n\ @param\ There\ is\ no\ paramters\r\n\ @return\ Nothing\ is\ returned\ \r\n
+comment5.params=
+comment5.target=void\ checkCollision()
+comment5.text=\r\n\ checkCollision\ will\ determine\ how\ to\ react\ when\ the\ fireBall\ comes\ in\ contact\ with\ different\ classes\ \ \r\n\ @param\ There\ is\ no\ paramters\r\n\ @return\ Nothing\ is\ returned\ \r\n
+numComments=6
