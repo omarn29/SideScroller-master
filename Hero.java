@@ -24,8 +24,7 @@ public class Hero extends Actor
     private int live = 1;
     private int reloadTimer = 25;
     private int marioSz = 1; //Number will change to 1,2,3 depending on different interactions to change
-    //the Heros appearance    
-
+    //the Heros appearance  
     /**
      * Hero will cunstuct a Hero to scale and the right direction 
      * @param There is no paramters
@@ -170,13 +169,17 @@ public class Hero extends Actor
     }
 
     /**
-     * checkCollision will determine how to react when the fireBall comes in contact with different classes  
+     * -- checkCollision will determine how to react when the Hero comes in contact with different classes,
+     * will change the healthbar by a value of +/- 25 if it touches 1up mushroom or goomba
+     * 
      * @param There is no paramters
      * @return Nothing is returned
      */
     private void checkCollision()
     {
         ScrollerWorld myWorld = (ScrollerWorld)getWorld();
+        HealthBar bar = getWorld().getObjects(HealthBar.class).get(0);
+
         if(getOneObjectAtOffset(0, getImage().getHeight()-15, Enemy.class) != null)
         {
             getWorld().removeObject(getOneObjectAtOffset(0, getImage().getHeight()-15, Enemy.class));
@@ -215,15 +218,16 @@ public class Hero extends Actor
             }            
             else if(marioSz == 1)//If Hero = 1 and touches Enemy he will lose a life 
             {    
+                bar.add(-25);
                 live--;
                 myWorld.subtractToLives();
                 getWorld().removeObject(getOneIntersectingObject(Enemy.class) );
             }
 
-            if(live == 0)// If live = 0 it will call for the gameOver method ScrollerWorld
-            {
-                myWorld.gameOver();             
-            }
+            //if(live == 0)// If live = 0 it will call for the gameOver method ScrollerWorld
+            //{
+            //    myWorld.gameOver();             
+            //}
 
         }
         else if(getOneObjectAtOffset(0, getImage().getHeight()-15, Platform.class) != null)
@@ -279,6 +283,7 @@ public class Hero extends Actor
             getWorld().removeObject(getOneIntersectingObject(Lives.class) );
             myWorld.addToLives();
             live++; // will increase amt of lives
+            bar.add(+25);
         }
 
         if( isTouching(Flower.class))
@@ -286,6 +291,6 @@ public class Hero extends Actor
             getWorld().removeObject(getOneIntersectingObject(Flower.class) );
             marioSz = 3;
             setImage(fireMario);
-        }        
+        }
     }
 }

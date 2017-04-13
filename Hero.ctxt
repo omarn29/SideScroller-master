@@ -15,5 +15,5 @@ comment4.target=void\ fall()
 comment4.text=\r\n\ fall\ will\ make\ the\ fireBall\ fall\ to\ the\ platform\ when\ its\ in\ the\ air\ \ \r\n\ @param\ There\ is\ no\ paramters\r\n\ @return\ Nothing\ is\ returned\ \r\n
 comment5.params=
 comment5.target=void\ checkCollision()
-comment5.text=\r\n\ checkCollision\ will\ determine\ how\ to\ react\ when\ the\ fireBall\ comes\ in\ contact\ with\ different\ classes\ \ \r\n\ @param\ There\ is\ no\ paramters\r\n\ @return\ Nothing\ is\ returned\r\n
+comment5.text=\r\n\ --\ checkCollision\ will\ determine\ how\ to\ react\ when\ the\ Hero\ comes\ in\ contact\ with\ different\ classes,\r\n\ \r\n\ \r\n\ @param\ There\ is\ no\ paramters\r\n\ @return\ Nothing\ is\ returned\r\n
 numComments=6

@@ -42,6 +42,9 @@ public class ScrollerWorld extends World
 
         addObject(new Hero(), 30, getHeight() - 30);
 
+        HealthBar healthbar = new HealthBar();
+        addObject(healthbar,264,65);
+        healthbar.setLocation(310,56);
     }
 
     /**
@@ -63,7 +66,7 @@ public class ScrollerWorld extends World
 
         } 
 
-        if(Greenfoot.getRandomNumber(150) < 1)
+        if(Greenfoot.getRandomNumber(100) < 1)
         {
             addObject(new Enemy(), 559, getHeight() - 27);
         }
@@ -90,7 +93,7 @@ public class ScrollerWorld extends World
 
         displayScore();
         displayLives(); 
-
+        
     }   
 
     /**
